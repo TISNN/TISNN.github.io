@@ -35,3 +35,21 @@
     }).done(done_func).fail(fail_func);
   });
 })(jQuery);
+
+// 获取所有具有 "contact-button" 类名的按钮
+var contactButtons = document.querySelectorAll('.contact-button');
+
+// 为每个按钮添加点击事件监听器
+contactButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        openModal();
+    });
+});
+
+function openModal() {
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
+}
